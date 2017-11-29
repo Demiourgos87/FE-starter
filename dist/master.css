@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: lightblue; }
+  body p {
+    font-size: 26px;
+    margin: 0;
+    padding: 20px;
+    color: #c34b4b; }
