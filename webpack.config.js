@@ -1,15 +1,16 @@
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// var path = require('path');
 
 // ----- Output file paths
-var cssPath = 'dist/master.css',
-    jsPath = 'dist/master.js';
+var cssOutput = 'dist/master.css',
+    jsOutput = 'dist/master.js';
 
 module.exports = {
     entry: './src/app.js',
     output: {
         path: __dirname,
-        filename: jsPath
+        filename: jsOutput
     },
     module: {
         rules: [
@@ -21,7 +22,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin(cssPath),
+        new ExtractTextPlugin(cssOutput),
     ]
     // plugins: [
     //     new HtmlWebpackPlugin({
