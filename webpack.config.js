@@ -11,6 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: jsOutput
     },
+    devtool: 'source-maps',
     module: {
         rules: [
             // ----- SCSS compiling

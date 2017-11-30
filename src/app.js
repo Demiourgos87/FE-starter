@@ -1,3 +1,8 @@
-const css = require('./scss/style.scss');
+var css = require('./scss/style.scss');
+var $ = require('jquery');
 
-console.log('hello webpack');
+var color = require('./js/test.js');
+
+$(document).ready(function() {
+    color.bodyDark();
+});
