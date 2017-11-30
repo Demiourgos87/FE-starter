@@ -1,34 +1,36 @@
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-// var path = require('path');
+const path = require('path');
 
 // ----- Output file paths
-var cssOutput = 'dist/master.css',
-    jsOutput = 'dist/master.js';
+var cssOutput = 'master.css',
+    jsOutput = 'master.js';
 
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: __dirname,
+        path: path.resolve(__dirname, 'dist'),
         filename: jsOutput
     },
     module: {
         rules: [
+            // ----- SCSS compiling
             { test: /\.scss$/, use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: ["css-loader","sass-loader"]
+                    use: ["css-loader", "sass-loader"]
                 })
             }
         ]
     },
+    devServer: {
+        // ----- Webpack dev server options
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 3000,
+        stats: 'errors-only',
+        open: true
+    },
     plugins: [
+        // ----- Output compiled css file
         new ExtractTextPlugin(cssOutput),
     ]
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         title: 'Webpack app',
-    //         hash: true,
-    //         template: './src/index.ejs', // Load a custom template (ejs by default see the FAQ for details)
-    //     })
-    // ]
 }

@@ -4,14 +4,14 @@
   "description": "webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --colors --content-base=./dist",
+    "dev": "webpack -d --watch & webpack-dev-server --progress --colors",
     "prod": "webpack -p"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^2.1.2",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
