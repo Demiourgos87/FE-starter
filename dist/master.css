@@ -198,8 +198,6 @@ template {
   display: none; }
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 * {
@@ -303,8 +301,16 @@ a {
 
 .b-test {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5rem;
-  background: #74d0e4;
-  text-align: center; }
+  background: #74d0e4; }
 
 /*# sourceMappingURL=master.css.map*/
