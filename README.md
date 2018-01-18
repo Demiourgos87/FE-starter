@@ -1,4 +1,4 @@
-# Webpack FE starter using yarn  
+# FE boilerplate using Webpack and yarn
 
 ## Usage  
 Install **yarn:** [Installation instructions](https://yarnpkg.com/en/docs/install)  
