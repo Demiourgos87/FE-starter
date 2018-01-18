@@ -1,3 +1,21 @@
-.DS_Store
-Thumbs.db
+*.serialize
+*.bak
+*.bk
+*.old
+.svn
 node_modules/
+vendor/
+
+# OS junk files
+[Tt]humbs.db
+*.DS_Store
+*.swp
+
+# IDE junk files
+.project
+.buildpath
+.settings
+.idea
+
+build/css/master.css*
+build/js/master.js*
