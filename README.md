@@ -15,7 +15,7 @@ Install webpack cli globally on your machine ```yarn add webpack``` (on Linux, m
 
 ### Compilation paths:
 * CSS (master.css) is compiled to: *build/css/*
-* Javascript (master.js) is compiled to: *build/js/webedia/*
+* Javascript (master.js) is compiled to: *build/js/*
 
 ### Commands:
 * ```yarn run dev``` - Runs webpack-dev-server for development mode
